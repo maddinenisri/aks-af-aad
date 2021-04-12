@@ -25,6 +25,14 @@ Assuming below cli modules are installed and configured
   terraform apply
 ```
 
+## Verify installation
+Note:- Assign user to newly provisioned AKS cluster admin group
+```sh
+az aks get-credentials -n <AKS NAME> -g <RG NAME> --overwrite-existing
+kubectl get nodes
+#Expect device login message here 
+```
+
 ## Destroy
 ```sh
   terraform destroy
